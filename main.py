@@ -61,7 +61,12 @@ def update_board(board, pos, player):
 
 def check_for_winner(board, player):
     # TODO: evaluar si el jugador indicado ha ganado la partida.
-    pass
+
+    if player == board[0][0] and player == board[0][1] and player == board[0][2] or player == board[1][0] and player == board[1][1] and player == board[1][2] or player == board[2][0] and player == board[2][1] and player == board[2][2] or player == board[0][0] and player == board[1][0] and player == board[2][0] or player == board[0][1] and player == board[1][1] and player == board[2][1] or player == board[0][2] and player == board[1][2] and player == board[2][2] or player == board[0][0] and player == board[1][1] and player == board[2][2] or player == board[0][2] and player == board[1][1] and player == board[2][0]:
+        return True 
+
+    else:
+        return False
 
 
 '''
@@ -70,6 +75,11 @@ Testing:
 
 
 board = create_empty_board()
-for i in range(1, len(board()):
-    update_board(board, i, "X")
+
+update_board(board, 3, "X")
+update_board(board, 7, "X")
+update_board(board, 5, "X")
+
+print(check_for_winner(board, "X"))
+
 print_board(board)
